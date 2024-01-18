@@ -44,7 +44,7 @@ def find_largest(data):
     return largest_index
 
 
-def selection_sort_dasc(data):
+def selection_sort_desc(data):
     sorted_array = []
     while data:
         largest_index = find_largest(data)
@@ -53,4 +53,4 @@ def selection_sort_dasc(data):
     return sorted_array
 
 
-print(selection_sort_dasc(data))
+print(selection_sort_desc(data))
