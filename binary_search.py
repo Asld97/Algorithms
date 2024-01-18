@@ -6,14 +6,13 @@ Hint: log2 1 = 0, but we still need to check wheter the number is the looking on
 """
 
 
-def binary_search(input, wanted):
+def binary_search(data, wanted):
     low = 0
-    high = len(input) - 1
+    high = len(data) - 1
     step = 0
     while low <= high:
         mid = (low + high) // 2
-
-        guess = input[mid]
+        guess = data[mid]
         step += 1
         print(
             f"Step finshed: {step}; min: {low}; max: {high}; mid: {mid}; guess: {guess}"
@@ -27,7 +26,7 @@ def binary_search(input, wanted):
             low = mid + 1
 
 
-input = [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 13, 15, 16, 21, 24, 45]
+data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 13, 15, 16, 21, 24, 45]
 wanted = 45
 
-print(f"The index of wanted number: {binary_search(input, wanted)}")
+print(f"The index of wanted number: {binary_search(data, wanted)}")
